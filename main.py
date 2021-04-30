@@ -16,7 +16,7 @@ st.set_page_config(
 def load_data():
     data = pd.DataFrame(None)
     for i in range(1,16):
-        data = pd.concat([data, pd.read_csv("/dataset/fraudTrain_"+str(i)+".csv")], axis = 0)
+        data = pd.concat([data, pd.read_csv("dataset/fraudTrain_"+str(i)+".csv")], axis = 0)
     lowercase = lambda x: str(x).lower()
     data.rename(lowercase, axis='columns', inplace=True)
     data['trans_date_trans_time'] = pd.to_datetime(data['trans_date_trans_time'])
