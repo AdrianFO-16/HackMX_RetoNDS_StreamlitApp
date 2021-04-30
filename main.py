@@ -14,7 +14,7 @@ st.set_page_config(
 
 @st.cache
 def load_data():
-    data = pd.read_csv('/Users/montsedracu123/Data_Science/hack/data/fraudTrain.csv',
+    data = pd.read_csv('fraudTrain_subsample.csv',
                        index_col=(0))
     lowercase = lambda x: str(x).lower()
     data.rename(lowercase, axis='columns', inplace=True)
